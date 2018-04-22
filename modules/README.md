@@ -204,3 +204,8 @@ Yum
 ---
 
 Defines yum aliases.
+
+Zaw
+---
+
+Integrates zaw into Prezto.
