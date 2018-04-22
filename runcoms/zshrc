@@ -11,3 +11,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Shift-tab to expand alias
+bindkey '\e[Z' _expand_alias
+
+
+###
+# Vim goodness
+###
+# bindkey -M vicmd <TAB>
+# bindkey -M vicmd 'T' beginning-of-line
+# bindkey -M vicmd 'Y' end-of-line
+
+## Quick trigger to enter command mode(vicmd) from the insert mode(viins)
+bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M vicmd 'B' backward-kill-word
+bindkey -M vicmd 'W' delete-word
+
+###
+# FASD shortcuts
+###
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+## We use the directory plugin for the directory stack
+# alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
