@@ -175,3 +175,9 @@ alias dkcu='docker-compose up'
 alias dkcU='docker-compose up -d'
 alias dkcv='docker-compose version'
 alias dkcx='docker-compose stop'
+
+# Custom functions
+function dkec {
+    docker exec -it $1 /bin/bash
+}
+
