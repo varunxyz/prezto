@@ -178,6 +178,6 @@ alias dkcx='docker-compose stop'
 
 # Custom functions
 function dkec {
-    docker exec -it $1 /bin/bash
+    docker exec -it $1 /bin/zsh
 }
 
